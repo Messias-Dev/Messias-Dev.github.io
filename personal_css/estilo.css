@@ -1,19 +1,25 @@
 .topic{
-    background-color: rgb(224, 157, 245);
-    border-radius: 1em;
+    width: 40%;
+    margin: auto;
+    margin-top: 3em;
 }
 
-.topic p{
+.topic_content{
+    background-color: rgb(222, 211, 226);
+    border-radius: 1em;
+    box-shadow: 10px 10px 5px ;
+}
+
+.topic_content p{
     width: 90%;
     margin: auto;
     font-size: 20px;
-
 }
 
 h1{
     width: 90%;
     margin: auto;
-   font-size: 4em;
+   font-size: 5em;
    padding: 0.5em 2em 0.5em 3em;
 }
 
@@ -39,9 +45,3 @@ body{
     margin: auto;
 }
 
-#div_sobre_mim{
-    width: 40%;
-    margin: auto;
-    margin-top: 3em;
-    
-}
