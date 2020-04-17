@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estudante de Engenharia de Software">
-    <meta name="author" content="Messias Nunesmaia">
-    <link rel="shortcut icon" href="imagens/code_icon.png">
-    <link rel="stylesheet" href="personal_css/estilo.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <title>Messias</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudante de Engenharia de Software">
+  <meta name="author" content="Messias Nunesmaia">
+  <link rel="shortcut icon" href="imagens/code_icon.png">
+  <link rel="stylesheet" href="personal_css/estilo.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <title>Messias</title>
 </head>
 
 <body>
   <div id="div_navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-">
-      <a class="navbar-brand" href="#div_navbar">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg- fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -26,7 +26,8 @@
           <a class="nav-item nav-link" href="#sobre_mim">Sobre mim <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#interesses">Interesses</a>
           <a class="nav-item nav-link" href="#skills">Skills</a>
-          <a class="nav-item nav-link" href="#formulario">Quer ter o seu site?</a>
+          <a class="nav-item nav-link" href="#contato">Quer ter o seu site?</a>
+          <p id="apresentacao" class="nav-item nav-link">Olá, sou Messias !</p>
         </div>
       </div>
     </nav>
@@ -35,7 +36,7 @@
     <h1>Sobre mim</h1>
     <div class="topic_content">
       <p>Estudante de Engenharia de Software | teste teste teste teste teste teste teste</p>
-    </div>  
+    </div>
     <br>
     <br>
 
@@ -43,8 +44,9 @@
   <div id="interesses" class="topic">
     <h1>Interesses</h1>
     <div class="topic_content">
-      <p>Atuar como Back-End em desenvolvimento de sistemas voltados para <strong>WEB</strong> ou <<strong>Android</strong>.
-         Aprimorar minhas habilidades e ganhar experiência profissional.</p>
+      <p>Atuar como Back-End em desenvolvimento de sistemas voltados para <strong>WEB</strong> ou
+        <strong>Android</strong>.
+        Aprimorar minhas habilidades e ganhar experiência profissional.</p>
     </div>
   </div>
   <div id="skills" class="topic">
@@ -52,7 +54,7 @@
     <div class="topic_content">
       <ul>
         <li>
-          Conhecimento em <strong>JAVA</strong> 
+          Conhecimento em <strong>JAVA</strong>
         </li>
         <li>
           Conhecimento em Desenvolvimento <strong>WEB</strong>
@@ -67,141 +69,170 @@
           Conhecimento em <strong>Orientação a Objeto</strong>
         </li>
       </ul>
-    </div>   
+    </div>
+  </div>
+  <div id="contato" class="topic">
+    <h1>Contato</h1>
+    <div class="topic_content">
+      <h2>Como deseja me contatar ?</h2>
+      <p>
+        <a href="https://www.instagram.com/messias_nunesmaia/" target="_blank"><img src="./imagens/instgram_icon.svg" alt="instagram_icon">
+        </a> |
+        <a href="#formulario"><img src="./imagens/email_icon.svg" alt="email_icon">
+        </a>
+      </p>
+    </div>
   </div>
   <div id="formulario" class="topic">
     <h1>Contato</h1>
     <div class="topic_content">
-      <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/messias.lsn@gmail.com" method="post">
+      <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/messias.lsn@gmail.com"
+        target="_blank" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="full-name">Nome</label>
           <input type="text" name="name" id="full-name" placeholder="Ex: Messias" required="">
           <label for="email-address">Endereço de E-mail</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@dominio.com" required="">
-          <label for="telephone">Telefone (Opcional)</label>
-          <input type="telephone" name="telephone" id="telephone" placeholder="(99) 9 9999-9999">
-          <label for="complaint">Para que quero um site?</label>
-          <textarea rows="6" name="complaint" id="complaint" placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos " required=""></textarea>
+          <label for="telephone">Telefone</label>
+          <input type="telephone" name="telephone" id="telephone" placeholder="(99) 9 9999-9999" required="">
+          <label for="complaint">Com que finalidade seria o site?</label>
+          <textarea rows="6" name="complaint" id="complaint"
+            placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos "
+            required=""></textarea>
           <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
         </fieldset>
         <input type="submit" value="Enviar">
-      </form><style>/* reset */
-      #fs-frm input,
-      #fs-frm select,
-      #fs-frm textarea,
-      #fs-frm fieldset,
-      #fs-frm optgroup,
-      #fs-frm label,
-      #fs-frm #card-element:disabled {
-        font-family: inherit;
-        font-size: 100%;
-        color: inherit;
-        border: none;
-        border-radius: 0;
-        display: block;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-      }
-      #fs-frm label,
-      #fs-frm legend,
-      #fs-frm ::placeholder {
-        font-size: .825em;
-        margin-bottom: .5em;
-        padding-top: .2em;
-        display: flex;
-        align-items: baseline;
-      }
-      
-      /* border, padding, margin, width */
-      #fs-frm input,
-      #fs-frm select,
-      #fs-frm textarea,
-      #fs-frm #card-element {
-        border: 1px solid rgba(0,0,0,0.2);
-        background-color: rgba(255,255,255,0.9);
-        padding: .75em 1em;
-        margin-bottom: 1.5em;
-      }
-      #fs-frm input:focus,
-      #fs-frm select:focus,
-      #fs-frm textarea:focus {
-        background-color: white;
-        outline-style: solid;
-        outline-width: thin;
-        outline-color: gray;
-        outline-offset: -1px;
-      }
-      #fs-frm [type="text"],
-      #fs-frm [type="email"] {
-        width: 100%;
-      }
-      #fs-frm [type="button"],
-      #fs-frm [type="submit"],
-      #fs-frm [type="reset"] {
-        width: auto;
-        cursor: pointer;
-        -webkit-appearance: button;
-        -moz-appearance: button;
-        appearance: button;
-      }
-      #fs-frm [type="button"]:focus,
-      #fs-frm [type="submit"]:focus,
-      #fs-frm [type="reset"]:focus {
-        outline: none;
-      }
-      #fs-frm [type="submit"],
-      #fs-frm [type="reset"] {
-        margin-bottom: 0;
-      }
-      #fs-frm select {
-        text-transform: none;
-      }
-      
-      #fs-frm [type="checkbox"] {
-        -webkit-appearance: checkbox;
-        -moz-appearance: checkbox;
-        appearance: checkbox;
-        display: inline-block;
-        width: auto;
-        margin: 0 .5em 0 0 !important;
-      }
-      
-      #fs-frm [type="radio"] {
-        -webkit-appearance: radio;
-        -moz-appearance: radio;
-        appearance: radio;
-      }
-      
-      /* address, locale */
-      #fs-frm fieldset.locale input[name="city"],
-      #fs-frm fieldset.locale select[name="state"],
-      #fs-frm fieldset.locale input[name="postal-code"] {
-        display: inline;
-      }
-      #fs-frm fieldset.locale input[name="city"] {
-        width: 52%;
-      }
-      #fs-frm fieldset.locale select[name="state"],
-      #fs-frm fieldset.locale input[name="postal-code"] {
-        width: 20%;
-      }
-      #fs-frm fieldset.locale input[name="city"],
-      #fs-frm fieldset.locale select[name="state"] {
-        margin-right: 3%;
-      }
+      </form>
+      <style>
+        /* reset */
+        #fs-frm input,
+        #fs-frm select,
+        #fs-frm textarea,
+        #fs-frm fieldset,
+        #fs-frm optgroup,
+        #fs-frm label,
+        #fs-frm #card-element:disabled {
+          font-family: inherit;
+          font-size: 100%;
+          color: inherit;
+          border: none;
+          border-radius: 0;
+          display: block;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+
+        #fs-frm label,
+        #fs-frm legend,
+        #fs-frm ::placeholder {
+          font-size: .825em;
+          margin-bottom: .5em;
+          padding-top: .2em;
+          display: flex;
+          align-items: baseline;
+        }
+
+        /* border, padding, margin, width */
+        #fs-frm input,
+        #fs-frm select,
+        #fs-frm textarea,
+        #fs-frm #card-element {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: .75em 1em;
+          margin-bottom: 1.5em;
+        }
+
+        #fs-frm input:focus,
+        #fs-frm select:focus,
+        #fs-frm textarea:focus {
+          background-color: white;
+          outline-style: solid;
+          outline-width: thin;
+          outline-color: gray;
+          outline-offset: -1px;
+        }
+
+        #fs-frm [type="text"],
+        #fs-frm [type="email"] {
+          width: 100%;
+        }
+
+        #fs-frm [type="button"],
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+          width: auto;
+          cursor: pointer;
+          -webkit-appearance: button;
+          -moz-appearance: button;
+          appearance: button;
+        }
+
+        #fs-frm [type="button"]:focus,
+        #fs-frm [type="submit"]:focus,
+        #fs-frm [type="reset"]:focus {
+          outline: none;
+        }
+
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+          margin-bottom: 0;
+          margin-left: 22.1em;
+        }
+
+        #fs-frm select {
+          text-transform: none;
+        }
+
+        #fs-frm [type="checkbox"] {
+          -webkit-appearance: checkbox;
+          -moz-appearance: checkbox;
+          appearance: checkbox;
+          display: inline-block;
+          width: auto;
+          margin: 0 .5em 0 0 !important;
+        }
+
+        #fs-frm [type="radio"] {
+          -webkit-appearance: radio;
+          -moz-appearance: radio;
+          appearance: radio;
+        }
+
+        /* address, locale */
+        #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+          display: inline;
+        }
+
+        #fs-frm fieldset.locale input[name="city"] {
+          width: 52%;
+        }
+
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+          width: 20%;
+        }
+
+        #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"] {
+          margin-right: 3%;
+        }
       </style>
     </div>
   </div>
   <footer>
     <p>
-      <a href="https://www.linkedin.com/in/messias-nunesmaia-4845b61a6/"><img src="./imagens/linkedin_icon.svg" alt="github_icon"></a>  |
-        <a href="https://github.com/Messias-Dev"><img src="./imagens/github_icon.svg" alt="github_icon"></a>
+      <a href="https://www.linkedin.com/in/messias-nunesmaia-4845b61a6/" target="_blank"><img src="./imagens/linkedin_icon.svg"
+          alt="linkedin_icon"></a> |
+      <a href="https://github.com/Messias-Dev" target="_blank"><img src="./imagens/github_icon.svg" alt="github_icon"></a>
     </p>
-    </footer>
-  
+  </footer>
+
 </body>
 
 </html>
