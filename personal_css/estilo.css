@@ -1,0 +1,23 @@
+footer{
+margin: 35% 1% 1% 48%;
+}
+
+footer img{
+    width: 30px;
+}
+
+body{
+    background-image: url(../imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 1400px 700px;
+}
+#div_navbar{
+    width: 100%;
+    margin: auto;
+    
+}
+
+#div_boy{
+    width: 60%;
+    margin: auto;
+}
