@@ -11,9 +11,17 @@
 }
 
 .topic_content p{
+    padding: 0.5em 2em 0.5em 3em;
     width: 90%;
     margin: auto;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.topic_content ul{
+    padding: 0.5em 2em 0.5em 3em;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
 }
 
 h1{
@@ -21,6 +29,7 @@ h1{
     margin: auto;
    font-size: 5em;
    padding: 0.5em 2em 0.5em 3em;
+   color: dark;
 }
 
 h2{
@@ -37,8 +46,8 @@ footer img{
 
 body{
     background-image: url(../imagens/background.jpg);
-    background-repeat: no-repeat;
-    background-size: 1400px 700px;
+    background-repeat: repeat;
+    background-size: 100% 50%;
 }
 #div_navbar{
     width: 100%;
