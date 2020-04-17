@@ -1,3 +1,26 @@
+.topic{
+    background-color: rgb(224, 157, 245);
+    border-radius: 1em;
+}
+
+.topic p{
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+
+}
+
+h1{
+    width: 90%;
+    margin: auto;
+   font-size: 4em;
+   padding: 0.5em 2em 0.5em 3em;
+}
+
+h2{
+    font-size: 2em;
+}
+
 footer{
 margin: 450px 1px 1px 620px;
 }
@@ -16,9 +39,9 @@ body{
     margin: auto;
 }
 
-#div_body{
-    width: 60%;
+#div_sobre_mim{
+    width: 40%;
     margin: auto;
-    background-color: blanchedalmond;
-    border-radius: 1px;
+    margin-top: 3em;
+    
 }
