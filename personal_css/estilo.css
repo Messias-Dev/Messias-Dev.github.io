@@ -14,10 +14,11 @@ body{
 #div_navbar{
     width: 100%;
     margin: auto;
-    
 }
 
-#div_boy{
+#div_body{
     width: 60%;
     margin: auto;
+    background-color: blanchedalmond;
+    border-radius: 1px;
 }
