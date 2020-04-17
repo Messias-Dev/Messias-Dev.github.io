@@ -32,14 +32,120 @@
       </div>
     </nav>
   </div>
+  <div id="sidebar">
+    <marquee scrollamount="2/" direction="down">
+    public static Connection getConnection() {
+      <br>
+      try {
+        <br>
+        Class.forName(DRIVER_CLASS);
+        <br>
+        connection = DriverManager.getConnection(URL, USUARIO, SENHA);
+        <br>
+      } catch (ClassNotFoundException e) {
+        <br>
+        // TODO Auto-generated catch block
+        <br>
+        e.printStackTrace();
+        <br>
+      } catch (SQLException e) {
+        <br>
+        // TODO Auto-generated catch block
+        <br>
+        e.printStackTrace();
+        <br>
+      }
+      <br>
+      return connection;
+      <br>
+    }
+    <br>
+    public static void closeConnection() {
+      <br>
+      try {
+        <br>
+        connection.close();
+        <br>
+      } catch (SQLException e) {
+        <br>
+        // TODO Auto-generated catch block
+        <br>
+        e.printStackTrace();
+        <br>
+      }
+      <br>
+    }
+    <br>
+    public static void adicionarNaLista(Paradise paradise) {
+      <br>
+      try {
+        <br>
+        Connection connection = ParadisesConnection.getConnection();
+        <br>
+        PreparedStatement statement = connection.prepareStatement(SQL_ADD_LUGAR);
+        <br>
+        statement.setString(0, paradise.getNome());
+        <br>
+        statement.execute(SQL_ADD_LUGAR);
+        <br>
+        statement.close();
+        <br>
+        ParadisesConnection.closeConnection();
+        <br>
+      } catch (SQLException e) {
+        <br>
+        // TODO Auto-generated catch block
+        <br>
+        e.printStackTrace();
+        <br>
+      }
+      <br>
+    }
+    <br>
+    public static List buscarTodosLugares(){
+      <br>
+      List paradises = new ArrayList  ();
+        <br>
+      try {
+        <br>
+        Connection connection = ParadisesConnection.getConnection();
+        <br>
+        PreparedStatement statement = connection.prepareStatement(SQL_BUSCAR_TODOS);
+        <br>
+        ResultSet resultSet = statement.executeQuery();
+        <br>
+        while (resultSet.next()) {
+          <br>
+          Paradise paradise = new Paradise(resultSet.getInt("ID"), resultSet.getString("NOME"));
+          <br>
+          paradises.add(paradise);
+          <br>
+        }
+        <br>
+        statement.close();
+        <br>
+        resultSet.close();
+        <br>
+        ParadisesConnection.closeConnection();
+        <br>
+      } catch (SQLException e) {
+        <br>
+        // TODO Auto-generated catch block
+        <br>
+        e.printStackTrace();
+        <br>
+      }
+      <br>
+      return paradises;
+      <br>
+    }
+    </marquee>
+  </div>
   <div id="sobre_mim" class="topic">
     <h1>Sobre mim</h1>
     <div class="topic_content">
       <p>Estudante de Engenharia de Software | teste teste teste teste teste teste teste</p>
     </div>
-    <br>
-    <br>
-
   </div>
   <div id="interesses" class="topic">
     <h1>Interesses</h1>
