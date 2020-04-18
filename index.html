@@ -8,8 +8,8 @@
   <meta name="author" content="Messias Nunesmaia">
   <link rel="shortcut icon" href="imagens/code_icon.png">
   <link rel="stylesheet" href="personal_css/estilo.css" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <title>Messias</title>
 </head>
@@ -34,119 +34,120 @@
   </div>
   <div id="sidebar">
     <marquee scrollamount="2/" direction="down">
-    public static Connection getConnection() {
+      public static Connection getConnection() {
       <br>
       try {
-        <br>
-        Class.forName(DRIVER_CLASS);
-        <br>
-        connection = DriverManager.getConnection(URL, USUARIO, SENHA);
-        <br>
+      <br>
+      Class.forName(DRIVER_CLASS);
+      <br>
+      connection = DriverManager.getConnection(URL, USUARIO, SENHA);
+      <br>
       } catch (ClassNotFoundException e) {
-        <br>
-        // TODO Auto-generated catch block
-        <br>
-        e.printStackTrace();
-        <br>
+      <br>
+      // TODO Auto-generated catch block
+      <br>
+      e.printStackTrace();
+      <br>
       } catch (SQLException e) {
-        <br>
-        // TODO Auto-generated catch block
-        <br>
-        e.printStackTrace();
-        <br>
+      <br>
+      // TODO Auto-generated catch block
+      <br>
+      e.printStackTrace();
+      <br>
       }
       <br>
       return connection;
       <br>
-    }
-    <br>
-    public static void closeConnection() {
-      <br>
-      try {
-        <br>
-        connection.close();
-        <br>
-      } catch (SQLException e) {
-        <br>
-        // TODO Auto-generated catch block
-        <br>
-        e.printStackTrace();
-        <br>
       }
       <br>
-    }
-    <br>
-    public static void adicionarNaLista(Paradise paradise) {
+      public static void closeConnection() {
       <br>
       try {
-        <br>
-        Connection connection = ParadisesConnection.getConnection();
-        <br>
-        PreparedStatement statement = connection.prepareStatement(SQL_ADD_LUGAR);
-        <br>
-        statement.setString(0, paradise.getNome());
-        <br>
-        statement.execute(SQL_ADD_LUGAR);
-        <br>
-        statement.close();
-        <br>
-        ParadisesConnection.closeConnection();
-        <br>
+      <br>
+      connection.close();
+      <br>
       } catch (SQLException e) {
-        <br>
-        // TODO Auto-generated catch block
-        <br>
-        e.printStackTrace();
-        <br>
+      <br>
+      // TODO Auto-generated catch block
+      <br>
+      e.printStackTrace();
+      <br>
       }
       <br>
-    }
-    <br>
-    public static List buscarTodosLugares(){
+      }
       <br>
-      List paradises = new ArrayList  ();
-        <br>
+      public static void adicionarNaLista(Paradise paradise) {
+      <br>
       try {
-        <br>
-        Connection connection = ParadisesConnection.getConnection();
-        <br>
-        PreparedStatement statement = connection.prepareStatement(SQL_BUSCAR_TODOS);
-        <br>
-        ResultSet resultSet = statement.executeQuery();
-        <br>
-        while (resultSet.next()) {
-          <br>
-          Paradise paradise = new Paradise(resultSet.getInt("ID"), resultSet.getString("NOME"));
-          <br>
-          paradises.add(paradise);
-          <br>
-        }
-        <br>
-        statement.close();
-        <br>
-        resultSet.close();
-        <br>
-        ParadisesConnection.closeConnection();
-        <br>
+      <br>
+      Connection connection = ParadisesConnection.getConnection();
+      <br>
+      PreparedStatement statement = connection.prepareStatement(SQL_ADD_LUGAR);
+      <br>
+      statement.setString(0, paradise.getNome());
+      <br>
+      statement.execute(SQL_ADD_LUGAR);
+      <br>
+      statement.close();
+      <br>
+      ParadisesConnection.closeConnection();
+      <br>
       } catch (SQLException e) {
-        <br>
-        // TODO Auto-generated catch block
-        <br>
-        e.printStackTrace();
-        <br>
+      <br>
+      // TODO Auto-generated catch block
+      <br>
+      e.printStackTrace();
+      <br>
+      }
+      <br>
+      }
+      <br>
+      public static List buscarTodosLugares(){
+      <br>
+      List paradises = new ArrayList ();
+      <br>
+      try {
+      <br>
+      Connection connection = ParadisesConnection.getConnection();
+      <br>
+      PreparedStatement statement = connection.prepareStatement(SQL_BUSCAR_TODOS);
+      <br>
+      ResultSet resultSet = statement.executeQuery();
+      <br>
+      while (resultSet.next()) {
+      <br>
+      Paradise paradise = new Paradise(resultSet.getInt("ID"), resultSet.getString("NOME"));
+      <br>
+      paradises.add(paradise);
+      <br>
+      }
+      <br>
+      statement.close();
+      <br>
+      resultSet.close();
+      <br>
+      ParadisesConnection.closeConnection();
+      <br>
+      } catch (SQLException e) {
+      <br>
+      // TODO Auto-generated catch block
+      <br>
+      e.printStackTrace();
+      <br>
       }
       <br>
       return paradises;
       <br>
-    }
+      }
     </marquee>
   </div>
   <div id="sobre_mim" class="topic">
     <h1>Sobre mim</h1>
     <div class="topic_content">
       <p>Olá, meu nome é Messias Nunesmaia, tenho 20 anos e sou Estudante de Engenharia de Software (3º Semestre).
-        Sou bastante dedicado e aprendo rápido. Meus conhecimentos podem ser vistos na aba <em>"Skills"</em>. Tenho 
-        mais facilidade em Back-End para desenvolvimento WEB ou Android, em Front-End para desenvolvimento de páginas
+        Sou bastante dedicado e aprendo rápido. Meus conhecimentos podem ser vistos na aba <em>"Skills"</em>. Tenho
+        mais facilidade em Back-End para desenvolvimento WEB ou Android, em Front-End para desenvolvimento de
+        páginas
         estáticas (como esta). no fim da página é possível acompanhar meu
         <em>"GitHub"</em></p>
     </div>
@@ -186,7 +187,8 @@
     <div class="topic_content">
       <h2>Como deseja me contatar ?</h2>
       <p>
-        <a href="https://www.instagram.com/messias_nunesmaia/" target="_blank"><img src="./imagens/instgram_icon.svg" alt="instagram_icon">
+        <a href="https://www.instagram.com/messias_nunesmaia/" target="_blank"><img src="./imagens/instgram_icon.svg"
+            alt="instagram_icon">
         </a> |
         <a href="#formulario"><img src="./imagens/email_icon.svg" alt="email_icon">
         </a>
@@ -233,6 +235,7 @@
           margin: 0;
           -webkit-appearance: none;
           -moz-appearance: none;
+
         }
 
         #fs-frm label,
@@ -332,14 +335,23 @@
         #fs-frm fieldset.locale select[name="state"] {
           margin-right: 3%;
         }
+
+        @media (max-width: 600px) {
+          #fs-frm [type="submit"],
+          #fs-frm [type="reset"] {
+            margin-bottom: 0;
+            margin-left: 15.5em;
+          }
+        }
       </style>
     </div>
   </div>
   <footer>
     <p>
-      <a href="https://www.linkedin.com/in/messias-nunesmaia-4845b61a6/" target="_blank"><img src="./imagens/linkedin_icon.svg"
-          alt="linkedin_icon"></a> |
-      <a href="https://github.com/Messias-Dev" target="_blank"><img src="./imagens/github_icon.svg" alt="github_icon"></a>
+      <a href="https://www.linkedin.com/in/messias-nunesmaia-4845b61a6/" target="_blank"><img
+          src="./imagens/linkedin_icon.svg" alt="linkedin_icon"></a> |
+      <a href="https://github.com/Messias-Dev" target="_blank"><img src="./imagens/github_icon.svg"
+          alt="github_icon"></a>
     </p>
   </footer>
 
