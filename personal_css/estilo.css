@@ -30,7 +30,7 @@ div img {
 footer {
     width: 8%;
     margin: 12em 1em 2em 39.5em;
-    background-color: lightgrey;
+    background-color: gainsboro;
     text-align: center;
     border-radius: 1em;
 }
@@ -56,7 +56,7 @@ marquee{
 }
 
 .topic_content {
-    background-color: lightgrey;
+    background-color: gainsboro;
     border-radius: 1em;
     box-shadow: 10px 10px 5px;
 }
@@ -107,10 +107,16 @@ marquee{
         margin-top: 3em;
     }
 
+    body {
+        background-image: url(../imagens/background.jpg);
+        background-repeat: repeat-y;
+        background-size: 50em 30em;
+    }
+
     footer {
         width: 25%;
         margin: 12em 1em 2em 11em;
-        background-color: lightgrey;
+        background-color: gainsboro;
         text-align: center;
         border-radius: 1em;
     }
