@@ -34,6 +34,110 @@
   </div>
   <div id="sidebar">
     <marquee scrollamount="2/" direction="down" >
+      public static boolean isValid(String CPF) {
+        <br>
+        // considera-se erro CPF's formados por uma sequencia de numeros iguais
+        <br>
+        if (CPF.equals("00000000000") ||
+        <br>
+            CPF.equals("11111111111") ||
+            <br>
+            CPF.equals("22222222222") || CPF.equals("33333333333") ||
+            <br>
+            CPF.equals("44444444444") || CPF.equals("55555555555") ||
+            <br>
+            CPF.equals("66666666666") || CPF.equals("77777777777") ||
+            <br>
+            CPF.equals("88888888888") || CPF.equals("99999999999") ||
+            <br>
+            (CPF.length() != 11))
+            <br>
+            return(false);
+            <br>
+          
+        char dig10, dig11;
+        <br>
+        int sm, i, r, num, peso;
+        <br>
+          
+        // "try" - protege o codigo para eventuais erros de conversao de tipo (int)
+        <br>
+        try {
+          <br>
+        // Calculo do 1o. Digito Verificador
+        <br>
+            sm = 0;
+            <br>
+            peso = 10;
+            <br>
+            for (i=0; i 9; i++) {  
+              <br>            
+        // converte o i-esimo caractere do CPF em um numero:
+        <br>
+        // por exemplo, transforma o caractere '0' no inteiro 0   
+        <br>      
+        // (48 eh a posicao de '0' na tabela ASCII)         
+        <br>
+            num = (int)(CPF.charAt(i) - 48);
+            <br> 
+            sm = sm + (num * peso);
+            <br>
+            peso = peso - 1;
+            <br>
+            }
+            <br>
+          
+            r = 11 - (sm % 11);
+            <br>
+            if ((r == 10) || (r == 11))
+            <br>
+                dig10 = '0';
+                <br>
+            else dig10 = (char)(r + 48); // converte no respectivo caractere numerico
+            <br>
+          
+        // Calculo do 2o. Digito Verificador
+        <br>
+            sm = 0;
+            <br>
+            peso = 11;
+            <br>
+            for(i=0; i 10; i++) {
+              <br>
+            num = (int)(CPF.charAt(i) - 48);
+            <br>
+            sm = sm + (num * peso);
+            <br>
+            peso = peso - 1;
+            <br>
+            }
+            <br>
+          
+            r = 11 - (sm % 11);
+            <br>
+            if ((r == 10) || (r == 11))
+            <br>
+                 dig11 = '0';
+                 <br>
+            else dig11 = (char)(r + 48);
+            <br>
+          
+        // Verifica se os digitos calculados conferem com os digitos informados.
+        <br>
+            if ((dig10 == CPF.charAt(9)) && (dig11 == CPF.charAt(10)))
+            <br>
+                 return(true);
+                 <br>
+            else return(false);
+            <br>
+                } catch (InputMismatchException erro) {
+                  <br>
+                return(false);
+                <br>
+            }
+            <br>
+        }
+        <br>
       public static Connection getConnection() {
       <br>
       try {
