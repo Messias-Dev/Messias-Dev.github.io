@@ -21,6 +21,13 @@ h2 {
     text-align: center;
 }
 
+h4 {
+    padding: 0.5em 1em 0.5em 0em;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
 div img {
     width: 30px;
     margin-top: 0.5em;
