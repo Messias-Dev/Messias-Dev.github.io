@@ -36,10 +36,12 @@ div img {
 
 footer {
     width: 8%;
-    margin: 12em 1em 2em 39.5em;
+    margin: 12em auto 2em auto;
     background-color: gainsboro;
     text-align: center;
     border-radius: 1em;
+    border: 1px, solid, #000;
+
 }
 
 footer img {
@@ -125,10 +127,11 @@ marquee {
     }
     footer {
         width: 25%;
-        margin: 12em 1em 2em 9em;
+        margin: 12em auto 2em auto;
         background-color: gainsboro;
         text-align: center;
         border-radius: 1em;
+        border: 1px, solid, #000;
     }
     #apresentacao {
         padding-left: 1em;
