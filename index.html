@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Estudante de Engenharia de Software">
   <meta name="author" content="Messias Nunesmaia">
+  <title>Messias</title>
   <link rel="shortcut icon" href="imagens/user_icon.svg">
   <link rel="stylesheet" href="personal_css/estilo.css" type="text/css">
   <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <title>Messias</title>
+  <script>
+    jQuery(document).ready(function($) { 
+        $(".scroll").click(function(event){        
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+       });
+    });
+    </script>
 </head>
 
 <body>
@@ -23,10 +31,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#sobre_mim">Sobre mim <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#interesses">Interesses</a>
-          <a class="nav-item nav-link" href="#skills">Skills</a>
-          <a class="nav-item nav-link" href="#contato">Quer ter o seu site?</a>
+          <a class="nav-item nav-link scroll" href="#sobre_mim">Sobre mim <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link scroll" href="#interesses">Interesses</a>
+          <a class="nav-item nav-link scroll" href="#skills">Skills</a>
+          <a class="nav-item nav-link scroll" href="#contato">Quer ter o seu site?</a>
           <p id="apresentacao" class="nav-item nav-link">Olá, sou Messias !</p>
         </div>
       </div>
