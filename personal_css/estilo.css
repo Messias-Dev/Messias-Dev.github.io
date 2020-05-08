@@ -162,6 +162,10 @@ marquee {
     #div_navbar {
         display: none;
     }
+    #perfil {     
+        width: 150px;
+        height: 150px;
+    }
     #auto_propaganda {
         display: inherit;
     }
