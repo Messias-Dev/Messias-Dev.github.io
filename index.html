@@ -355,7 +355,7 @@
       target="_blank" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="full-name">Nome</label>
-          <input type="text" name="name" id="full-name" placeholder="Ex: Messias" required="">
+          <input type="text" name="name" id="full-name" placeholder="Ex: Messias" required="" value=userip>
           <label for="email-address">Endereço de E-mail</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@dominio.com" required="">
           <label for="telephone">Telefone</label>
@@ -368,11 +368,6 @@
         </fieldset>
         <input type="submit" value="Enviar">
       </form>
-      <script>
-        var fm=document.forms[0];
-        var el=fm.elements[0];
-        el.value=userip;
-      </script>
       <style>
         /* reset */
         #fs-frm input,
