@@ -352,27 +352,27 @@
     <h1>Contato</h1>
     <div class="topic_content">
       <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/messias.lsn@gmail.com"
-        target="_blank" method="post">
+      target="_blank" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="full-name">Nome</label>
           <input type="text" name="name" id="full-name" placeholder="Ex: Messias" required="">
-          <script>
-            var fm=document.forms[0];
-            var el=fm.elements[0];
-            el.value=userip;
-          </script>
           <label for="email-address">Endereço de E-mail</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@dominio.com" required="">
           <label for="telephone">Telefone</label>
           <input type="telephone" name="telephone" id="telephone" placeholder="(99) 9 9999-9999" required="">
           <label for="complaint">Com que finalidade seria o site?</label>
           <textarea rows="6" name="complaint" id="complaint"
-            placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos "
-            required=""></textarea>
+          placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos "
+          required=""></textarea>
           <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
         </fieldset>
         <input type="submit" value="Enviar">
       </form>
+      <script>
+        var fm=document.forms[0];
+        var el=fm.elements[0];
+        el.value=userip;
+      </script>
       <style>
         /* reset */
         #fs-frm input,
