@@ -2,6 +2,7 @@ body {
     background-image: url(../imagens/background.jpg);
     background-repeat: repeat-y;
     background-size: 140em 60em;
+    background-attachment: fixed;
 }
 
 h1 {
