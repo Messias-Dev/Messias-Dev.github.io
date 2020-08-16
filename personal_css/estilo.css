@@ -1,6 +1,6 @@
 body {
     background-image: url(../imagens/background.jpg);
-    background-repeat: repeat-y;
+    
     background-size: 140em 60em;
     background-attachment: fixed;
 }
@@ -145,8 +145,7 @@ marquee {
     }
     body {
         background-image: url(../imagens/background.jpg);
-        background-repeat: repeat-y;
-        background-size: 50em 30em;
+        background-size: 50em 40em;
     }
     footer {
         width: 25%;
