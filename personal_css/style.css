@@ -1,0 +1,98 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-size: 150em 65em;
+    background-attachment: fixed;
+}
+
+h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .9s infinite;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 1.7rem;
+}
+
+p, ul {
+    font-size: 18px;
+}
+
+footer{
+    box-shadow: none;
+}
+
+.text-site {
+    color: rgb(218, 216, 216);
+}
+
+.bg-site {
+    background-color: gainsboro;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px;
+}
+
+footer i {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.size-page {
+    height: 100vh;
+}
+
+.img-perfil {
+    width: 15rem;
+    height: auto;
+}
+
+.neon-site {
+    animation: neon 2s alternate infinite ease-in-out;
+    --cor--neon: #19c019;
+    
+}
+
+#namePresentation {
+    padding-left: 53rem;
+}
+
+#contactIcon i{
+    color: black;
+    font-size: 2.5rem;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor--neon));
+    }
+    to {
+        filter: drop-shadow(0 0 3px var(--cor--neon));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    body {
+        background-size: 50em 35em;
+    }
+    
+    .img-perfil {
+        width: 10rem;
+    }
+}

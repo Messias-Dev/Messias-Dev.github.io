@@ -1,519 +1,444 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Estudante de Engenharia de Software">
   <meta name="author" content="Messias Nunesmaia">
-  <title>Messias</title>
-  <link rel="shortcut icon" href="imagens/user_icon.svg">
-  <link rel="stylesheet" href="personal_css/estilo.css" type="text/css">
+  <link rel="shortcut icon" href="images/user_icon.svg">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="personal_css/style.css" type="text/css">
+
+  <!-- Optional Scripts -->
+  <script type="text/javascript" src="https://kit.fontawesome.com/30b455b9ab.js"></script>
   <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
   <script>
-    jQuery(document).ready(function($) { 
-        $(".scroll").click(function(event){        
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
-       });
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 600);
+      });
     });
   </script>
+
+  <title>Messias</title>
 </head>
 
 <body>
 
-  <script type="text/javascript">
-    var userip;
-  </script>
-
-  <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-
-  <!--
-  <script type="text/javascript">
-    document.write("Seu IP e:", userip);
-  </script>
-  -->
-  
+  <!-- Navbar -->
   <div id="div_navbar">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg- fixed-top">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      <button class="d-none navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link scroll" href="#sobre_mim">Sobre mim <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link scroll" href="#interesses">Interesses</a>
+          <a class="nav-item nav-link scroll" href="#about">Sobre mim <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link scroll" href="#interests">Interesses</a>
           <a class="nav-item nav-link scroll" href="#skills">Skills</a>
           <a class="nav-item nav-link scroll" href="#contato">Quer ter o seu site?</a>
-          <p id="apresentacao" class="nav-item nav-link">Olá, sou Messias !</p>
+          <a id="namePresentation" class="nav-item nav-link" aria-disabled="true">Olá, sou Messias !</a>
         </div>
       </div>
     </nav>
   </div>
-  <div id="sidebar">
-    <marquee scrollamount="2/" direction="down" >
-      public static boolean isValid(String CPF) {
-        <br>
-        // considera-se erro CPF's formados por uma sequencia de numeros iguais
-        <br>
-        if (CPF.equals("00000000000") ||
-        <br>
-            CPF.equals("11111111111") ||
-            <br>
-            CPF.equals("22222222222") || CPF.equals("33333333333") ||
-            <br>
-            CPF.equals("44444444444") || CPF.equals("55555555555") ||
-            <br>
-            CPF.equals("66666666666") || CPF.equals("77777777777") ||
-            <br>
-            CPF.equals("88888888888") || CPF.equals("99999999999") ||
-            <br>
-            (CPF.length() != 11))
-            <br>
-            return(false);
-            <br>
-          
-        char dig10, dig11;
-        <br>
-        int sm, i, r, num, peso;
-        <br>
-          
-        // "try" - protege o codigo para eventuais erros de conversao de tipo (int)
-        <br>
-        try {
-          <br>
-        // Calculo do 1o. Digito Verificador
-        <br>
-            sm = 0;
-            <br>
-            peso = 10;
-            <br>
-            for (i=0; i 9; i++) {  
-              <br>            
-        // converte o i-esimo caractere do CPF em um numero:
-        <br>
-        // por exemplo, transforma o caractere '0' no inteiro 0   
-        <br>      
-        // (48 eh a posicao de '0' na tabela ASCII)         
-        <br>
-            num = (int)(CPF.charAt(i) - 48);
-            <br> 
-            sm = sm + (num * peso);
-            <br>
-            peso = peso - 1;
-            <br>
-            }
-            <br>
-          
-            r = 11 - (sm % 11);
-            <br>
-            if ((r == 10) || (r == 11))
-            <br>
-                dig10 = '0';
-                <br>
-            else dig10 = (char)(r + 48); // converte no respectivo caractere numerico
-            <br>
-          
-        // Calculo do 2o. Digito Verificador
-        <br>
-            sm = 0;
-            <br>
-            peso = 11;
-            <br>
-            for(i=0; i 10; i++) {
-              <br>
-            num = (int)(CPF.charAt(i) - 48);
-            <br>
-            sm = sm + (num * peso);
-            <br>
-            peso = peso - 1;
-            <br>
-            }
-            <br>
-          
-            r = 11 - (sm % 11);
-            <br>
-            if ((r == 10) || (r == 11))
-            <br>
-                 dig11 = '0';
-                 <br>
-            else dig11 = (char)(r + 48);
-            <br>
-          
-        // Verifica se os digitos calculados conferem com os digitos informados.
-        <br>
-            if ((dig10 == CPF.charAt(9)) && (dig11 == CPF.charAt(10)))
-            <br>
-                 return(true);
-                 <br>
-            else return(false);
-            <br>
-                } catch (InputMismatchException erro) {
-                  <br>
-                return(false);
-                <br>
-            }
-            <br>
-        }
-        <br>
-      public static Connection getConnection() {
-      <br>
-      try {
-      <br>
-      Class.forName(DRIVER_CLASS);
-      <br>
-      connection = DriverManager.getConnection(URL, USUARIO, SENHA);
-      <br>
-      } catch (ClassNotFoundException e) {
-      <br>
-      // TODO Auto-generated catch block
-      <br>
-      e.printStackTrace();
-      <br>
-      } catch (SQLException e) {
-      <br>
-      // TODO Auto-generated catch block
-      <br>
-      e.printStackTrace();
-      <br>
-      }
-      <br>
-      return connection;
-      <br>
-      }
-      <br>
-      public static void closeConnection() {
-      <br>
-      try {
-      <br>
-      connection.close();
-      <br>
-      } catch (SQLException e) {
-      <br>
-      // TODO Auto-generated catch block
-      <br>
-      e.printStackTrace();
-      <br>
-      }
-      <br>
-      }
-      <br>
-      public static void adicionarNaLista(Paradise paradise) {
-      <br>
-      try {
-      <br>
-      Connection connection = ParadisesConnection.getConnection();
-      <br>
-      PreparedStatement statement = connection.prepareStatement(SQL_ADD_LUGAR);
-      <br>
-      statement.setString(0, paradise.getNome());
-      <br>
-      statement.execute(SQL_ADD_LUGAR);
-      <br>
-      statement.close();
-      <br>
-      ParadisesConnection.closeConnection();
-      <br>
-      } catch (SQLException e) {
-      <br>
-      // TODO Auto-generated catch block
-      <br>
-      e.printStackTrace();
-      <br>
-      }
-      <br>
-      }
-      <br>
-      public static List buscarTodosLugares(){
-      <br>
-      List paradises = new ArrayList ();
-      <br>
-      try {
-      <br>
-      Connection connection = ParadisesConnection.getConnection();
-      <br>
-      PreparedStatement statement = connection.prepareStatement(SQL_BUSCAR_TODOS);
-      <br>
-      ResultSet resultSet = statement.executeQuery();
-      <br>
-      while (resultSet.next()) {
-      <br>
-      Paradise paradise = new Paradise(resultSet.getInt("ID"), resultSet.getString("NOME"));
-      <br>
-      paradises.add(paradise);
-      <br>
-      }
-      <br>
-      statement.close();
-      <br>
-      resultSet.close();
-      <br>
-      ParadisesConnection.closeConnection();
-      <br>
-      } catch (SQLException e) {
-      <br>
-      // TODO Auto-generated catch block
-      <br>
-      e.printStackTrace();
-      <br>
-      }
-      <br>
-      return paradises;
-      <br>
-      }
-    </marquee>
-  </div>
-  <div id="perfil">
-    <img src="imagens/perfil.png" alt="foto_perfil">
-  </div>
-  <div id="sobre_mim" class="topic">
-    <h1>Sobre mim</h1>
-    <div class="topic_content">
-      <p>Olá, meu nome é Messias Nunesmaia, tenho 20 anos e sou Estudante de Engenharia de Software (4º Semestre).
-        Sou bastante dedicado e aprendo rápido. Meus conhecimentos podem ser vistos na aba <em>"Skills"</em>. Tenho
-        mais facilidade em Back-End para desenvolvimento WEB ou Android, em Front-End para desenvolvimento de
-        páginas
-        estáticas (como esta). no fim da página é possível acompanhar meu
-        <em>"GitHub"</em></p>
+
+  <!-- Presentation -->
+  <section id="presentation" class="mb-5 size-page">
+
+    <div class="container">
+
+      <!-- Perfil -->
+      <div class="py-5">
+        <img class="d-block rounded-circle mx-auto shadow img-perfil" src="images/perfil.png" alt="">
+      </div>
+
+      <!-- Title -->
+      <div class="py-5">
+
+        <h1 class="d-block text-center text-site display-3">Olá, sou Messias !</h1>
+
+        <script>
+          function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+              setTimeout(() => elemento.innerHTML += letra, 90 * i);
+            });
+          }
+
+          const titulo = document.querySelector('h1');
+          typeWriter(titulo);
+        </script>
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site py-5">
+        <a href="#about" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-4x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-3x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
     </div>
-  </div>
-  <div id="interesses" class="topic">
-    <h1>Interesses</h1>
-    <div class="topic_content">
-      <p>Atuar como Back-End em desenvolvimento de sistemas voltados para <strong>WEB</strong> ou
-        <strong>Android</strong>.
-        Aprimorar minhas habilidades e ganhar experiência profissional.</p>
+
     </div>
-  </div>
-  <div id="skills" class="topic">
-    <h1>Skills</h1>
-    <div class="topic_content">
-      <ul>
-        <li>
-          Conhecimento em <strong>JAVA</strong>
-        </li>
-        <li>
-          Conhecimento em Desenvolvimento <strong>WEB</strong>
-        </li>
-        <li>
-          Conhecimento em <strong>Spring</strong>
-        </li>
-        <li>
-          Conhecimento em <strong>JSP</strong>, <strong>HTML</strong> e <strong>CSS</strong>
-        </li>
-        <li>
-          Conhecimento em <strong>GIT</strong>
-        </li>
-        <li>
-          Conhecimento em <strong>Orientação a Objeto</strong>
-        </li>
-      </ul>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Sobre Mim </h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-sm-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-5">
+        <p>Olá, meu nome é Messias Nunesmaia, tenho 20 anos e sou Estudante de Engenharia de Software (4º Semestre).
+          Sou bastante dedicado e aprendo rápido. Meus conhecimentos podem ser vistos na aba <em>"Skills"</em>. Tenho
+          mais facilidade em Back-End para desenvolvimento WEB ou Android, em Front-End para desenvolvimento de
+          páginas
+          estáticas (como esta). no fim da página é possível acompanhar meu
+          <em>"GitHub"</em></p>
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#interests" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
     </div>
-  </div>
-  <div id="auto_propaganda" class="topic">
-    <h1>Quer ter o seu site ?</h1>
-    <div class="topic_content">
-      <h4>Desenvolvo sites para :</h4>
+
+  </section>
+
+  <!-- Interests -->
+  <section id="interests" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Interesses</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-sm-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-5">
+        <p>Atuar como Back-End em desenvolvimento de sistemas voltados para <strong>WEB</strong> ou
+          <strong>Android</strong>.
+          Aprimorar minhas habilidades e ganhar experiência profissional.</p>
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#skills" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Skills</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-sm-12 col-md-5 mx-auto bg-site pt-1 pb-5 px-5">
         <ul>
           <li>
-            Auto Divulgação
+            Conhecimento em <strong>JAVA</strong>
           </li>
           <li>
-            Divulgação De Produtos
+            Conhecimento em Desenvolvimento <strong>WEB</strong>
           </li>
           <li>
-           Blogs
+            Conhecimento em <strong>Spring</strong>
           </li>
           <li>
-            Preenchimento De Formulários
+            Conhecimento em <strong>JSP</strong>, <strong>HTML</strong> e <strong>CSS</strong>
           </li>
           <li>
-            MAIS...
+            Conhecimento em <strong>GIT</strong>
+          </li>
+          <li>
+            Conhecimento em <strong>Orientação a Objeto</strong>
           </li>
         </ul>
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#sites" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
     </div>
-  </div>
-  <div id="contato" class="topic">
-    <h1>Contato</h1>
-    <div class="topic_content">
-      <h2>Como deseja me contatar ?</h2>
-      <p>
-        <a href="https://www.instagram.com/messias_lsn/" target="_blank"><img src="./imagens/instgram_icon.svg"
-            alt="instagram_icon"></a> |
-        <a class="scroll" href="#formulario"><img src="./imagens/email_icon.svg" alt="email_icon">
-        </a>
-      </p>
+
+  </section>
+
+  <!-- Sites -->
+  <section id="sites" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Quer ter o seu site ?</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-sm-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-5">
+        <h3>Desenvolvo Sites Informativos ou de Auto Divulgação </h3>
+        <br>
+        <h4>Entre em contato comigo :</h4>
+
+        <div id="contactIcon" class="row col-7 col-sm-4 mx-auto py-3">
+
+          <a href="https://www.instagram.com/messias_lsn/" class="text-decoration-none mx-auto" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="#" class="text-decoration-none mx-auto" target="_blank"><i class="far fa-envelope"></i></a>
+
+        </div>
+
+        <div class="col-12 pt-5">
+          <a class="card-link text-success float-sm-center float-md-right" href="#" target="_blank">Saber Mais</a>
+        </div>
+
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#contact" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
     </div>
-  </div>
-  <div id="formulario" class="topic">
-    <h1>Contato</h1>
-    <div class="topic_content">
-      <form id="fs-frm" name="complaint-form" accept-charset="utf-8" action="https://formspree.io/messias.lsn@gmail.com"
-      target="_blank" method="post">
-        <fieldset id="fs-frm-inputs">
-          <input type="text" name="Ip" id="user-ip" style="display: none;">
-          <script>   
-            document.getElementById("Ip").value = userip;
-          </script>
-          <label for="full-name">Nome</label>
-          <input type="text" name="Nome" id="full-name" placeholder="Ex: Messias" required="true">
-          <label for="email-address">Endereço de E-mail</label>
-          <input type="email" name="E-mail" id="email-address" placeholder="email@dominio.com" required="true">
-          <label for="telephone">Telefone</label>
-          <input type="telephone" name="Telefone" id="telephone" placeholder="(99) 9 9999-9999" required="true">
-          <label for="complaint">Com que finalidade seria o site?</label>
-          <textarea rows="6" name="Finalidade" id="complaint"
-          placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos "
-          required="true"></textarea>
-          <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission">
-        </fieldset>
-        <input type="submit" value="Enviar">
-      </form>
-     
-      <style>
-        /* reset */
-        #fs-frm input,
-        #fs-frm select,
-        #fs-frm textarea,
-        #fs-frm fieldset,
-        #fs-frm optgroup,
-        #fs-frm label,
-        #fs-frm #card-element:disabled {
-          font-family: inherit;
-          font-size: 100%;
-          color: inherit;
-          border: none;
-          border-radius: 0;
-          display: block;
-          width: 100%;
-          padding: 0;
-          margin: 0;
-          -webkit-appearance: none;
-          -moz-appearance: none;
 
-        }
+  </section>
 
-        #fs-frm label,
-        #fs-frm legend,
-        #fs-frm ::placeholder {
-          font-size: .825em;
-          margin-bottom: .5em;
-          padding-top: .2em;
-          display: flex;
-          align-items: baseline;
-        }
+  <!-- Contact and Footer -->
+  <section id="contact" class="my-5 size-page">
 
-        /* border, padding, margin, width */
-        #fs-frm input,
-        #fs-frm select,
-        #fs-frm textarea,
-        #fs-frm #card-element {
-          border: 1px solid rgba(0, 0, 0, 0.2);
-          background-color: rgba(255, 255, 255, 0.9);
-          padding: .75em 1em;
-          margin-bottom: 1.5em;
-        }
+    <div class="container col-12">
 
-        #fs-frm input:focus,
-        #fs-frm select:focus,
-        #fs-frm textarea:focus {
-          background-color: white;
-          outline-style: solid;
-          outline-width: thin;
-          outline-color: gray;
-          outline-offset: -1px;
-        }
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site"><i class="text-success fas fa-paper-plane">&nbsp</i>Contato</h2>
+      </div>
 
-        #fs-frm [type="text"],
-        #fs-frm [type="email"] {
-          width: 100%;
-        }
+      <!-- Content -->
+      <div class="col-sm-12 col-md-5 mx-auto bg-site p-4">
 
-        #fs-frm [type="button"],
-        #fs-frm [type="submit"],
-        #fs-frm [type="reset"] {
-          width: auto;
-          cursor: pointer;
-          -webkit-appearance: button;
-          -moz-appearance: button;
-          appearance: button;
-        }
+        <form id="fs-frm" name="complaint-form" accept-charset="utf-8"
+          action="https://formspree.io/messias.lsn@gmail.com" target="_blank" method="post">
+          <fieldset id="fs-frm-inputs">
+            <input type="text" name="Ip" id="user-ip" style="display: none;">
 
-        #fs-frm [type="button"]:focus,
-        #fs-frm [type="submit"]:focus,
-        #fs-frm [type="reset"]:focus {
-          outline: none;
-        }
+            <!-- Ip Script -->
+            <script type="text/javascript">
+              var userip;
+            </script>
 
-        #fs-frm [type="submit"],
-        #fs-frm [type="reset"] {
-          margin-bottom: 0;
-          margin-left: 22.1em;
-        }
+            <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
 
-        #fs-frm select {
-          text-transform: none;
-        }
+            <script>
+              document.getElementById("Ip").value = userip;
+            </script>
 
-        #fs-frm [type="checkbox"] {
-          -webkit-appearance: checkbox;
-          -moz-appearance: checkbox;
-          appearance: checkbox;
-          display: inline-block;
-          width: auto;
-          margin: 0 .5em 0 0 !important;
-        }
+            <label for="full-name">Nome</label>
+            <input type="text" name="Nome" id="full-name" placeholder="Ex: Messias" required="true">
+            <label for="email-address">Endereço de E-mail</label>
+            <input type="email" name="E-mail" id="email-address" placeholder="email@dominio.com" required="true">
+            <label for="telephone">Telefone</label>
+            <input type="telephone" name="Telefone" id="telephone" placeholder="(99) 9 9999-9999" required="true">
+            <label for="complaint">Com que finalidade seria o site?</label>
+            <textarea rows="3" name="Finalidade" id="complaint"
+              placeholder="Ex: Atuo na área de direito e quero um site pessoal para auto divulgação e possíveis contatos de casos "
+              required="true"></textarea>
+          </fieldset>
+          <input type="submit" value="Enviar">
+        </form>
 
-        #fs-frm [type="radio"] {
-          -webkit-appearance: radio;
-          -moz-appearance: radio;
-          appearance: radio;
-        }
+        <style>
+          /* reset */
+          #fs-frm input,
+          #fs-frm select,
+          #fs-frm textarea,
+          #fs-frm fieldset,
+          #fs-frm optgroup,
+          #fs-frm label,
+          #fs-frm #card-element:disabled {
+            font-family: inherit;
+            font-size: 100%;
+            color: inherit;
+            border: none;
+            border-radius: 0;
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
 
-        /* address, locale */
-        #fs-frm fieldset.locale input[name="city"],
-        #fs-frm fieldset.locale select[name="state"],
-        #fs-frm fieldset.locale input[name="postal-code"] {
-          display: inline;
-        }
+          }
 
-        #fs-frm fieldset.locale input[name="city"] {
-          width: 52%;
-        }
+          #fs-frm label,
+          #fs-frm legend,
+          #fs-frm ::placeholder {
+            font-size: .825em;
+            margin-bottom: .5em;
+            padding-top: .2em;
+            display: flex;
+            align-items: baseline;
+          }
 
-        #fs-frm fieldset.locale select[name="state"],
-        #fs-frm fieldset.locale input[name="postal-code"] {
-          width: 20%;
-        }
+          /* border, padding, margin, width */
+          #fs-frm input,
+          #fs-frm select,
+          #fs-frm textarea,
+          #fs-frm #card-element {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: .75em 1em;
+            margin-bottom: 1.5em;
+            border-radius: 5px;
+          }
 
-        #fs-frm fieldset.locale input[name="city"],
-        #fs-frm fieldset.locale select[name="state"] {
-          margin-right: 3%;
-        }
+          #fs-frm input:focus,
+          #fs-frm select:focus,
+          #fs-frm textarea:focus {
+            background-color: white;
+            outline-style: solid;
+            outline-width: thin;
+            outline-color: gray;
+            outline-offset: -1px;
+          }
 
-        @media (max-width: 600px) {
+          #fs-frm [type="text"],
+          #fs-frm [type="email"] {
+            width: 100%;
+          }
+
+          #fs-frm [type="button"],
+          #fs-frm [type="submit"],
+          #fs-frm [type="reset"] {
+            width: auto;
+            cursor: pointer;
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+            border-radius: 5px;
+          }
+
+          #fs-frm [type="button"]:focus,
+          #fs-frm [type="submit"]:focus,
+          #fs-frm [type="reset"]:focus {
+            outline: none;
+          }
 
           #fs-frm [type="submit"],
           #fs-frm [type="reset"] {
             margin-bottom: 0;
-            margin-left: 10.5em;
+            margin-left: auto;
           }
-        }
-      </style>
+
+          #fs-frm select {
+            text-transform: none;
+          }
+
+          #fs-frm [type="checkbox"] {
+            -webkit-appearance: checkbox;
+            -moz-appearance: checkbox;
+            appearance: checkbox;
+            display: inline-block;
+            width: auto;
+            margin: 0 .5em 0 0 !important;
+          }
+
+          #fs-frm [type="radio"] {
+            -webkit-appearance: radio;
+            -moz-appearance: radio;
+            appearance: radio;
+          }
+
+          /* address, locale */
+          #fs-frm fieldset.locale input[name="city"],
+          #fs-frm fieldset.locale select[name="state"],
+          #fs-frm fieldset.locale input[name="postal-code"] {
+            display: inline;
+          }
+
+          #fs-frm fieldset.locale input[name="city"] {
+            width: 52%;
+          }
+
+          #fs-frm fieldset.locale select[name="state"],
+          #fs-frm fieldset.locale input[name="postal-code"] {
+            width: 20%;
+          }
+
+          #fs-frm fieldset.locale input[name="city"],
+          #fs-frm fieldset.locale select[name="state"] {
+            margin-right: 3%;
+          }
+        </style>
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#presentation" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-up text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-up text-site"></i></a>
+      </div>
+
     </div>
-  </div>
-  <footer>
-    <p>
-      <a href="https://www.linkedin.com/in/messias-nunesmaia/" target="_blank"><img
-          src="./imagens/linkedin_icon.svg" alt="linkedin_icon"></a> |
-      <a href="https://github.com/Messias-Dev" target="_blank"><img src="./imagens/github_icon.svg"
-          alt="github_icon"></a>
-    </p>
-  </footer>
+
+    <footer>
+
+      <div class="my-5">
+        <div class="row bg-site col-4 col-sm-1 mx-auto py-2">
+
+          <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="mx-auto" target="blank"><i
+              class="fab fa-linkedin-in"></i></a>
+
+          <a href="https://github.com/Messias-Dev" class="mx-auto" target="blank"> <i class="fab fa-github "></i></a>
+
+        </div>
+      </div>
+
+    </footer>
+
+  </section>
+
 
 </body>
 
