@@ -24,18 +24,28 @@ p, ul {
     font-size: 18px;
 }
 
+nav{
+    widows: 100%;
+}
+
 footer{
     box-shadow: none;
 }
 
 .text-site {
-    color: rgb(218, 216, 216);
+    color: rgb(241, 241, 241);
 }
 
 .bg-site {
-    background-color: gainsboro;
+    background-color: rgb(241, 241, 241);
     border: 1px solid #000;
     border-radius: 1rem;
+    box-shadow: 10px 10px 10px;
+}
+
+.bg-card-site{
+    background-color: rgb(241, 241, 241);
+    border: 1px solid #000;
     box-shadow: 10px 10px 10px;
 }
 
