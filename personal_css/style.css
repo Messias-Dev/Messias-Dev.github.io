@@ -20,8 +20,12 @@ h3{
     font-size: 1.7rem;
 }
 
-p, ul {
+p, ol, ul {
     font-size: 18px;
+}
+
+ul{
+    list-style-type:disc
 }
 
 nav{
