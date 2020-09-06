@@ -20,7 +20,8 @@
 
     <!-- Optional Scripts -->
     <script type="text/javascript" src="https://kit.fontawesome.com/30b455b9ab.js"></script>
-    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
@@ -54,8 +55,8 @@
     <!-- Navbar -->
     <div id="div_navbar">
         <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-            <button class="d-none navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -65,12 +66,9 @@
                     <a class="nav-item nav-link scroll" href="#prices">Preços</a>
                     <a class="nav-item nav-link scroll" href="#importance">Importância</a>
                     <a class="nav-item nav-link scroll" href="#experience">Experiência</a>
-                    <a id="namePresentation" class="nav-link" aria-disabled="true">Olá, sou Messias !</a>
                 </div>
+                <span class="navbar-text ml-auto">Olá, sou Messias !</span>
             </div>
-        </nav>
-        <nav class="d-sm-none navbar navbar-expand-lg navbar-dark ">
-            <a class="text-secondary nav-item nav-link" href="./index.html"><i class="fas fa-arrow-left"></i></a>
         </nav>
     </div>
 
