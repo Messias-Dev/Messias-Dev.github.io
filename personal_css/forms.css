@@ -57,7 +57,7 @@
 }
 
 .form-site textarea:focus+.label-site .content-site, .form-site textarea:valid+.label-site .content-site {
-    transform: translateY(-300%);
+    transform: translateY(-200%);
     color: green;
 }
 
