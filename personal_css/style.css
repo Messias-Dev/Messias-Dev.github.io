@@ -86,9 +86,10 @@ footer i {
     font-size: 2.5rem;
 }
 
-#experience img{
-    width: 12rem;
-    height: 6rem;
+.experience img{
+    width: 100%;
+    height: auto;
+
 }
 
 /* @keyframes blink {
