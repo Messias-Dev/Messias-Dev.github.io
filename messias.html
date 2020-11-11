@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Estudante de Engenharia de Software">
+  <meta name="author" content="Messias Nunesmaia">
+  <meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:5" name="robots" />
+  <LINK href="https://www.messias.gq/" rel="canonical">
+  </LINK>
+  <link href="https://www.messias.gq/" rel="amphtml" />
+  <link rel="shortcut icon" href="images/user_icon.svg">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="personal_css/style.css" type="text/css">
+  <link rel="stylesheet" href="personal_css/forms.css" type="text/css">
+
+  <!-- Optional Scripts -->
+  <script type="text/javascript" src="https://kit.fontawesome.com/30b455b9ab.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175891785-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-175891785-1');
+  </script>
+
+  <!-- Script Roll -->
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 600);
+      });
+    });
+  </script>
+
+  <title>Messias</title>
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <div id="div_navbar">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link scroll" href="#about">Sobre mim <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link scroll" href="#interests">Interesses</a>
+          <a class="nav-item nav-link scroll" href="#skills">Skills</a>
+          <a class="nav-item nav-link scroll" href="#sites">Quer ter o seu site?</a>
+        </div>
+        <span class="navbar-text ml-auto">Olá, sou Messias !</span>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Presentation -->
+  <section id="presentation" class="mb-5 size-page">
+
+    <div class="container">
+
+      <!-- Perfil -->
+      <div class="py-5">
+        <img class="d-block rounded-circle mx-auto shadow img-perfil" src="images/perfil.png" alt="">
+      </div>
+
+      <!-- Title -->
+      <div class="py-5">
+
+        <h1 class="d-block text-center text-site display-3">Olá, sou Messias !</h1>
+
+        <script>
+          function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+              setTimeout(() => elemento.innerHTML += letra, 150 * i);
+            });
+          }
+
+          const titulo = document.querySelector('h1');
+          typeWriter(titulo);
+        </script>
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site py-5">
+        <a href="#about" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-4x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-3x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Sobre Mim </h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-4">
+        <p>Olá, meu nome é Messias Nunesmaia, tenho 20 anos e sou Estudante de Engenharia de Software (4º Semestre).
+          Sou bastante dedicado e aprendo rápido. Meus conhecimentos podem ser vistos na aba <em>"Skills"</em>. Tenho
+          mais facilidade em Back-End para desenvolvimento WEB ou Android, em Front-End para desenvolvimento de
+          páginas
+          estáticas (como esta). no fim da página é possível acompanhar meu
+          <em>"GitHub"</em></p>
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#interests" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Interests -->
+  <section id="interests" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Interesses</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-4">
+        <p>Atuar em desenvolvimento de sistemas voltados para <strong>WEB</strong> ou
+          <strong>Android</strong>.
+          Aprimorar minhas habilidades e ganhar experiência profissional.</p>
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#skills" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Skills</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-5 mx-auto bg-site pt-3 pb-5 px-2">
+
+        <ul>
+          <li>Experiência acadêmica em <strong>Java WEB :</strong>
+            <ul style="list-style: circle">
+              <li><strong>SPRING</strong></li>
+              <li><strong>HTML</strong></li>
+              <li><strong>CSS</strong></li>
+            </ul>
+          </li>
+          <li>Experiência acadêmica em <strong>Firebase</strong>
+          <li>Experiência acadêmica em <strong>Bootstrap</strong>
+          <li>Experiência acadêmica em repositórios virtuais :
+            <ul style="list-style: circle">
+              <li><strong>GitHub</strong></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#sites" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Sites -->
+  <section id="sites" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site">Quer ter o seu site ?</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-5 text-center mx-auto bg-site pt-4 pb-5 px-4">
+        <h3>Entre em contato :</h3>
+
+        <div id="contactIcon" class="row col-7 col-sm-4 mx-auto pb-3 pt-5">
+
+          <a href="https://www.instagram.com/messias_lsn/" class="text-decoration-none mx-auto"><i
+              class="fab fa-instagram text-success"></i></a>
+          <a href="#contact" class="text-decoration-none mx-auto scroll"><i
+              class="far fa-envelope text-success"></i></a>
+
+        </div>
+
+        <div class="col-12 pt-3">
+          <a class="btn btn-success float-center" href="sites.html">Saiba Mais</a>
+        </div>
+
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#contact" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact and Footer -->
+  <section id="contact" class="my-5 size-page">
+
+    <div class="container col-12">
+
+      <!-- Title -->
+      <div class="col-12 text-center pt-5 pb-4">
+        <h2 class="text-site"><i class="text-success fas fa-paper-plane">&nbsp</i>Contato</h2>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-md-5 mx-auto bg-site p-4">
+
+        <form id="fs-frm" name="complaint-form" accept-charset="utf-8"
+          action="https://formspree.io/messias.lsn@gmail.com" method="post">
+          <fieldset id="fs-frm-inputs">
+
+            <!-- Ip Script -->
+            <script type="text/javascript">
+              var userip;
+            </script>
+
+            <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+
+            <input type="text" name="Ip" id="user-ip" style="display: none;">
+
+            <script>
+              document.getElementById("user-ip").value = userip;
+            </script>
+
+            <div class="d-flex bg-transparent my-3 form-site">
+              <input type="text" name="Nome" id="full-name" required>
+              <label for="email" class="label-site"><span class="content-site">Nome</span></label>
+            </div>
+            <div class="d-flex bg-transparent my-3 form-site">
+              <input type="email" name="E-mail" id="email-address" required>
+              <label for="email" class="label-site"><span class="content-site">E-mail</span></label>
+            </div>
+            <div class="d-flex bg-transparent my-3 form-site">
+              <input type="telephone" name="Telefone" id="telephone" required>
+              <label for="telephone" class="label-site"><span class="content-site">Telefone</span></label>
+            </div>
+            <div class="d-flex my-3 form-site">
+              <textarea rows="2" name="Finalidade" id="complaint" required></textarea>
+              <label for="complaint" class="label-site"><span class="content-site">Finalidade</span></label>
+            </div>
+
+          </fieldset>
+          <input id="enviar-formulario" class="d-block btn btn-success ml-auto mt-3" type="submit" value="Enviar">
+
+        </form>
+
+      </div>
+
+      <!-- SVG -->
+      <div class="row neon-site  py-5">
+        <a href="#presentation" class="text-decoration-none mx-auto scroll"><i
+            class="d-none d-md-block fa-3x fas fa-arrow-circle-up text-site"></i>
+          <i class="d-sm-none fa-2x fas fa-arrow-circle-up text-site"></i></a>
+      </div>
+
+    </div>
+
+    <footer>
+
+      <div class="my-5">
+        <div class="row bg-site col-4 col-sm-1 mx-auto py-2">
+
+          <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="mx-auto"><i
+              class="fab fa-linkedin-in"></i></a>
+
+          <a href="https://github.com/Messias-Dev" class="mx-auto"> <i class="fab fa-github "></i></a>
+
+        </div>
+      </div>
+
+    </footer>
+
+  </section>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/real-time-database.js"></script>
+
+
+</body>
+
+</html>
