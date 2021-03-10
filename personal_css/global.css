@@ -1,0 +1,33 @@
+/* Green #75FF00 */
+
+
+.bg-primary{
+    background-color: #75FF00 !important;
+}
+
+.text-primary{
+    color: #75FF00 !important;
+}
+
+.bg-blue{
+    background-color: steelblue;
+}
+
+.bg-pink{
+    background-color: palevioletred;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+#backgroundAndTitle {
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+@media (min-width: 992px) {
+    #backgroundAndTitle {
+        margin-top: -58.59px;
+    }
+}

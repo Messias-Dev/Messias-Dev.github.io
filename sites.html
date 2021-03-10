@@ -1,372 +1,257 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Venha adquirir o seu site">
-    <meta name="author" content="Messias Nunesmaia">
-    <meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:5" name="robots" />
-    <LINK href="https://www.messias.gq/" rel="canonical">
-    </LINK>
-    <link href="https://www.messias.gq/" rel="amphtml" />
-    <link rel="shortcut icon" href="images/user_icon.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="imagem/x-icon" href="./images/logo.svg" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
 
-    <!-- Personal CSS -->
-    <link rel="stylesheet" href="personal_css/style.css" type="text/css">
+  <!-- Personal CSS -->
+  <link href="./personal_css/global.css" rel="stylesheet" />
+  <link href="./personal_css/sites.css" rel="stylesheet" />
 
-    <!-- Optional Scripts -->
-    <script type="text/javascript" src="https://kit.fontawesome.com/30b455b9ab.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175891785-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Script Roll -->
+  <script src="./personal_js/roll.js"></script>
 
-        gtag('config', 'UA-175891785-1');
-    </script>
-
-    <!-- Script Roll -->
-    <script>
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 600);
-            });
-        });
-    </script>
-
-    <title>Messias - Sites</title>
+  <title>Messias - Sites</title>
 </head>
 
 <body>
 
+  <!-- Header -->
+  <header>
+
     <!-- Navbar -->
-    <div id="div_navbar">
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="./index.html"><i class="fas fa-arrow-left"></i></a>
-                    <a class="nav-item nav-link scroll" href="#informations">Informações</a>
-                    <a class="nav-item nav-link scroll" href="#prices">Preços</a>
-                    <a class="nav-item nav-link scroll" href="#importance">Importância</a>
-                    <a class="nav-item nav-link scroll" href="#experience">Experiência</a>
-                </div>
-                <span class="navbar-text ml-auto">Olá, sou Messias !</span>
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+
+        <a class="navbar-brand nav-link" href="https://www.messias.gq">
+          <i class="text-success fab fa-medium-m fa-lg"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link " aria-current="page" href="./index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sites.html" rel="nofollow">Sites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aplicativos.html">Aplicativos</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav d-flex flex-row">
+            <!-- Icons -->
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.linkedin.com/in/messias-nunesmaia/" rel="nofollow" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.instagram.com/messias_lsn/" rel="nofollow" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://github.com/Messias-Dev" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Background And Title -->
+    <div id="backgroundAndTitle" class="bg-image shadow-2-strong">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container d-flex align-items-center justify-content-center text-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Quer ter o seu site ?</h1>
+            <script>
+              function typeWriter(elemento) {
+                const textoArray = elemento.innerHTML.split('');
+                elemento.innerHTML = '';
+                textoArray.forEach((letra, i) => {
+                  setTimeout(() => elemento.innerHTML += letra, 100 * i);
+                });
+              }
+
+              const titulo = document.querySelector('h1');
+              typeWriter(titulo);
+            </script>
+
+            <!-- Arrow -->
+            <div class="mt-5 mx-auto d-md-none">
+              <a class="scroll" href="#packs">
+                <i class="text-white fas fa-chevron-down fa-2x"></i>
+              </a>
             </div>
-        </nav>
+
+          </div>
+        </div>
+
+
+      </div>
     </div>
 
-    <!-- Informations -->
-    <section id="informations" class="mb-5">
 
-        <div class="container col-12">
+  </header>
 
-            <!-- Title -->
-            <div class="col-12 text-center pt-5 pb-4">
-                <h2 class="text-site">Quer ter o seu site ? </h2>
-            </div>
 
-            <!-- Content -->
-            <div class="col-12 col-md-5 mx-auto bg-site pt-2 pb-5 px-2">
-                <h4 class="text-center mt-2 mb-4">Desenvolvo :</h4>
-                <ul>
-                    <li>Site <strong>informativo</strong>.</li>
-                    <li>Site para <strong>divulgação</strong>.</li>
-                    <li>Página <strong>pessoal</strong>.</li>
-                    <li>Portal.</li>
-                    <li>Blog.</li>
-                    <li>Sistemas para cadastro/login.</li>
-                    <li>Formulários <strong>automáticos</strong>.</li>
-                </ul>
-                <h4 class="text-center my-4"><strong>Não</strong> Desenvolvo :</h4>
-                <ul>
-                    <li>E-Commerce.</li>
-                </ul>
-            </div>
+  <!--Main-->
+  <main class="mt-5">
 
-            <!-- SVG -->
-            <div class="row neon-site  py-5">
-                <a href="#prices" class="text-decoration-none mx-auto scroll"><i
-                        class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
-                    <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
-            </div>
+    <div class="container">
 
-        </div>
+      <!-- Packs -->
+      <section id="packs" class="text-center py-4">
+        <h2 class="mb-5 mt-3"><strong>Pacotes</strong></h2>
 
-    </section>
+        <div class=" mt-5 row text-center">
 
-    <!-- Prices -->
-    <section id="prices" class="my-5 ">
 
-        <div class="container col-12 mb-auto">
+          <ul class="my-5 col-12 col-md-4 list-group list-group-vertical">
 
-            <!-- Title -->
-            <div class="col-12 text-center pt-5 pb-4">
-                <h2 class="text-site">Preços</h2>
-            </div>
+            <h5 class="mb-2">Site Simples</h5>
+            <p class="mb-5 text-muted">R$ 370,00</p>
 
-            <!-- Content -->
+            <li class="list-group-item">Página principal &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Qualquer conteúdo desejado &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Links para qualquer referência &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Imagens dinâmicas &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Vídeos &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Site responsivo &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Formulário para contato automático &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">© (Copyright) &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Hospedagem &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Domínio &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Plataforma para Criação/Atualização de posts próprios &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Banco de dados seguro &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Integração com o Google Analytics &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Criação de contas para usuários &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Confirmação de cadastro via e-mail &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Autenticação segura &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Sistema contra fraude de contas múltiplas &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+          
+            <a href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Simples." class="col-5 col-sm-3 mt-5 mb-3 mx-auto btn-lg btn-success">Obter</a>
+          </ul>
 
-            <!-- Cards -->
-            <div class="row">
+          <ul class="my-5 col-12 col-md-4 list-group list-group-vertical">
 
-                <div class="col-12 col-md-3 ml-auto mb-5 ">
+            <h5 class="mb-2">Site Padrão</h5>
+            <p class="mb-5 text-muted">R$ 600,00</p>
 
-                    <div class="card bg-card-site my-3">
+            <li class="list-group-item">Página principal &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Qualquer conteúdo desejado &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Links para qualquer referência &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Imagens dinâmicas &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Vídeos &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Site responsivo &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Formulário para contato automático &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">© (Copyright) &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Hospedagem &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Domínio &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Plataforma para Criação/Atualização de posts próprios &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Banco de dados seguro &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Integração com o Google Analytics &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Criação de contas para usuários &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Confirmação de cadastro via e-mail &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Autenticação segura &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
+            <li class="list-group-item">Sistema contra fraude de contas múltiplas &nbsp&nbsp<i class="text-danger fas fa-times"></i></li>
 
-                        <img class="card-img-top" src="images/website_example_8.svg" alt="website_example_8">
+            <a href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Padrão." class="col-5 col-sm-3 mt-5 mb-3 mx-auto btn-lg btn-success">Obter</a>
+          </ul>
 
-                        <div class="card-body">
-                            <h5 class="card-title">Site Simples</h5>
-                            <h6 class="text-muted card-substitle mb-2">R$ 370,00</h6>
-                            <p class="card-text">
-                            <ul>
-                                <li>Página principal</li>
-                                <li>Qualquer conteúdo desejado</li>
-                                <li>Links para <strong>qualquer referência</strong></li>
-                                <li>Imagens <strong>dinâmicas</strong></li>
-                                <li>Vídeos</li>
-                                <li>Site <strong>responsivo</strong></li>
-                                <li>Formulário para contato <strong>automático</strong></li>
-                                <li>&copy (Copyright)</li>
-                                <li>Hospedagem</li>
-                                <li>Domínio</li>
-                            </ul>
-                            <br>
-                            (Recomendado para Página Pessoal)
-                            <br>
-                            </p>
-                            <a class="card-link text-success float-right "
-                                href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Simples.">Obter</a>
-                        </div>
 
-                    </div>
+          <ul class="my-5 col-12 col-md-4 list-group list-group-vertical">
 
-                </div>
+            <h5 class="mb-2">Site Completo</h5>
+            <p class="mb-5 text-muted">R$ 1.100,00</p>
 
-                <div class="col-12 col-md-3 mb-5 ">
-
-                    <div class="card bg-card-site my-3">
-
-                        <img class="card-img-top" src="images/website_example_2.png" alt="website_example_2">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Site Padrão</h5>
-                            <h6 class="text-muted card-substitle mb-2">R$ 600,00</h6>
-                            <p class="card-text">
-                            <ul>
-                                <li>Site Simples</li>
-                                <li>Plataforma para <strong>Criação/Atualização</strong> de posts próprios</li>
-                                <li>Banco de dados <strong>seguro</strong></li>
-                                <li>Integração com o <strong>Google Analytics</strong></li>
-                            </ul>
-                            <br>
-                            (Recomendado para Blog/Portal)
-                            <br>
-                            </p>
-                            <a class="card-link text-success float-right "
-                                href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Padr%C3%A3o.">Obter</a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-12 col-md-3 mr-auto mb-5 ">
-
-                    <div class="card bg-card-site my-3">
-
-                        <img class="card-img-top" src="images/website_example_6.svg" alt="website_example_6">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Site Completo</h5>
-                            <h6 class="text-muted card-substitle mb-2">R$ 1.100,00</h6>
-                            <p class="card-text">
-                            <ul>
-                                <li>Site Padrão</li>
-                                <li>Criação de contas para <strong>usuários</strong></li>
-                                <li>Confirmação de cadastro <strong>via e-mail</strong></li>
-                                <li>Autenticação <strong>segura</strong></li>
-                                <li>Sistema <strong>contra fraude</strong> de contas múltiplas</li>
-                            </ul>
-                            <br>
-                            (Recomendado para Site Complexo)
-                            <br>
-                            </p>
-                            <a class="card-link text-success float-right "
-                                href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Complexo.">Obter</a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="row">
-
-                <div class=" col-12 col-md-3 ml-auto mb-5">
-
-                    <div class="card bg-card-site my-3">
-
-                        <img class="card-img-top" src="images/website_example.jpg" alt="website_example">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Páginas Adicionais</h5>
-                            <h6 class="text-muted card-subtitle mb-2">R$ 20,00</h6>
-                            <p class="card-text">O valor cobrado para <strong>cada</strong> páginal
-                                adicional (fora a
-                                página principal) é de <strong>R$ 20,00</strong> !
-                                <br>
-                                Páginas adicionais contém os mesmos benefícios da página principal e são
-                                <strong>opcionais</strong>.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-12 col-md-3 mr-auto mb-5">
-
-                    <div class="card bg-card-site my-3">
-
-                        <img class="card-img-top" src="images/website_example_7.svg" alt="website_example_7">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Domínio Nacional</h5>
-                            <h6 class="text-muted card-subtitle mb-2">R$ 40,00</h6>
-                            <p class="card-text">O custo para que seu site tenha um domínio Nacional com
-                                terminação
-                                <strong>".com.br"</strong> é de <strong>R$ 40,00 anuais</strong> !
-                                <br>
-                                Este custo é totalmente dedicado ao registro do domínio e é
-                                <strong>opcinoal</strong>.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <li class="list-group-item">Página principal &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Qualquer conteúdo desejado &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Links para qualquer referência &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Imagens dinâmicas &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Vídeos &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Site responsivo &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Formulário para contato automático &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">© (Copyright) &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Hospedagem &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Domínio &nbsp&nbsp<i class="text-center text-success fas fa-check"></i></li>
+            <li class="list-group-item">Plataforma para Criação/Atualização de posts próprios &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Banco de dados seguro &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Integração com o Google Analytics &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Criação de contas para usuários &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Confirmação de cadastro via e-mail &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Autenticação segura &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+            <li class="list-group-item">Sistema contra fraude de contas múltiplas &nbsp&nbsp<i class="text-success fas fa-check"></i></li>
+          
+            <a href="mailto:messias.lsn@gmail.com?subject=Adquirir%20um%20Site&body=Estou%20entrando%20em%20contato%20pois%20desejo%20adquirir%20um%20Site%20Completo." class="col-5 col-sm-3 mt-5 mb-3 mx-auto btn-lg btn-success">Obter</a>
+          </ul>
 
         </div>
 
-        <!-- SVG -->
-        <div class="d-none row neon-site  py-5">
-            <a href="#importance" class="text-decoration-none mx-auto scroll"><i
-                    class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
-                <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
-        </div>
-
-        </div>
-
-    </section>
-
-    <!-- Importance -->
-    <section id="importance" class="my-5">
-
-        <div class="container col-12">
-
-            <!-- Title -->
-            <div class="col-12 text-center pt-5 pb-4">
-                <h2 class="text-site">Importância</h2>
-            </div>
-
-            <!-- Content -->
-            <div class="col-12 col-md-5 text-center mx-auto bg-site pt-2 pb-5 px-4   ">
-                <h4 class="text-center mt-2 mb-4">Porque devo ter um site ?</h4>
-                <p>Qualquer veiculação com <strong>mídias</strong>, <strong>redes sociais</strong> e
-                    <strong>internete</strong> são de extrema importância hoje em dia.
-                    Empresas de diferentes tamanhos já estão migrando para o meio digital e isso se intensificou durante
-                    a pandemia. Já as empresas recém-criadas iniciam sua jornada no meio digital. Pessoas autônomas
-                    querem divulgar o seu negócio - <strong> ninguém quer ficar
-                        para trás !</strong></p>
-            </div>
-
-            <!-- SVG -->
-            <div class="row neon-site  py-5">
-                <a href="#experience" class="text-decoration-none mx-auto scroll"><i
-                        class="d-none d-md-block fa-3x fas fa-arrow-circle-down text-site"></i>
-                    <i class="d-sm-none fa-2x fas fa-arrow-circle-down text-site"></i></a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Experience and Footer -->
-    <section class="my-5">
-
-        <!-- Experience -->
-        <div class="container col-12">
-
-            <!-- Title -->
-            <div class="col-12 text-center pt-5 pb-4">
-                <h2 class="text-site">Experiência</h2>
-            </div>
-
-            <!-- Content -->
-            <div class="col-12 col-md-5 mx-auto bg-site py-5">
-
-                <div class="row">
-
-                    <div class="experience col-12 col-md-6 mx-auto my-auto">
-                        <a class="d-block mx-auto my-auto" href="https://fnn-ong.github.io"><img src="images/fnn_logo.png" alt="fnn_logo"></a>
-                    </div>
-                    <hr class="d-sm-none" style="border-radius: 10px;">
-                    <div class="experience col-12 col-md-6 mx-auto my-auto">
-                        <a class="" href="https://www.lepain.gq"><img src="images/lepain_logo.png" alt="fnn_logo"></a>
-                    </div>
+      </section>
 
 
-                </div>
+      <hr class="my-5" />
 
-            </div>
-
-            <!-- SVG -->
-            <div class="row neon-site  py-5">
-                <a href="#informations" class="text-decoration-none mx-auto scroll"><i
-                        class="d-none d-md-block fa-3x fas fa-arrow-circle-up text-site"></i>
-                    <i class="d-sm-none fa-2x fas fa-arrow-circle-up text-site"></i></a>
-            </div>
+    </div>
+  </main>
 
 
-        </div>
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
 
-        <!-- Footer-->
-        <footer>
+    <hr class="m-0" />
 
-            <div class="my-5">
-                <div class="row bg-site col-4 col-sm-1 mx-auto py-2">
+    <div class="text-center py-4 align-items-center">
+      <p>Me siga nas redes</p>
+      <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="btn btn-success btn-floating mx-1"
+        role="button" rel="nofollow" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.instagram.com/messias_lsn/" class="btn btn-success btn-floating mx-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/Messias-Dev" class="btn btn-success btn-floating mx-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
-                    <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="mx-auto"><i
-                            class="fab fa-linkedin-in"></i></a>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-dark" href="https://www.messias.gq">Messias Nunesmaia</a>
+    </div>
 
-                    <a href="https://github.com/Messias-Dev" class="mx-auto"> <i class="fab fa-github "></i></a>
 
-                </div>
-            </div>
+  </footer>
 
-        </footer>
 
-    </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
 </body>
 
