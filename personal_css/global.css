@@ -26,6 +26,16 @@
     height: 100vh;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
 @media (min-width: 992px) {
     #backgroundAndTitle {
         margin-top: -58.59px;
