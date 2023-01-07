@@ -10,15 +10,14 @@
   <link rel="shortcut icon" type="imagem/x-icon" href="./images/logo.svg" />
 
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
 
   <!-- Personal CSS -->
   <link href="./personal_css/global.css" rel="stylesheet" />
-  <link href="./personal_css/index.css" rel="stylesheet" />
 
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -30,412 +29,77 @@
   <title>Messias - Soluções Em Tecnologia</title>
 </head>
 
+
 <body>
 
-  <!-- Header -->
-  <header>
+  <div id="glassmorphism" class="card my-auto">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-      <div class="container-fluid">
-
-        <a class="navbar-brand nav-link" href="https://www.messias.gq">
-          <i class="text-success fab fa-medium-m fa-lg"></i>
+    <nav class="navbar navbar-expand-lg">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="./index.html">
+          <i class="fas fa-home"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Toggle a -->
+        <a href="./index.html" class="navbar-toggler" type="a" data-mdb-toggle="collapse" data-mdb-target="#navbarasExample"
+          aria-controls="navbarasExample" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link scroll" aria-current="page" href="#about">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./sites.html" rel="nofollow">Sites</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./aplicativos.html">Aplicativos</a>
-            </li>
-          </ul>
+        </a>
 
-          <ul class="navbar-nav d-flex flex-row">
-            <!-- Icons -->
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.linkedin.com/in/messias-nunesmaia/" rel="nofollow" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.instagram.com/messias_lsn/" rel="nofollow" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://github.com/Messias-Dev" rel="nofollow" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-          </ul>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarasExample">
+
+          <!-- Center links -->
+          <div class="d-flex align-items-center ms-auto">
+            <a href="./index.html" class="btn btn-link px-3 me-2">
+              Sobre
+            </a>
+            <a href="./works.html" class="btn btn-link me-3">
+              Meu trabalho
+            </a>
+            <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="btn btn-link me-3">
+              LinkedIn
+            </a>
+          </div>
+
+          <!-- Right links -->
+          <div class="d-flex align-items-center ms-auto">
+            <a href="./hire.html" class="btn btn-secondary px-3 me-2">
+              Me contrate
+            </a>
+          </div>
         </div>
+        <!-- Collapsible wrapper -->
       </div>
+      <!-- Container wrapper -->
     </nav>
+    <!-- Navbar -->
 
-    <!-- Background And Title -->
-    <div id="backgroundAndTitle" class="bg-image shadow-2-strong">
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
-        <div class="container d-flex align-items-center justify-content-center text-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Soluções Em Tecnologia</h1>
-            <h5 id="subtitleSite" class="mb-5">Sites | Aplicativos</h5>
-            <script>
-              function typeWriter(elemento) {
-                const textoArray = elemento.innerHTML.split('');
-                elemento.innerHTML = '';
-                textoArray.forEach((letra, i) => {
-                  setTimeout(() => elemento.innerHTML += letra, 100 * i);
-                });
-              }
+    <!-- Description -->
+    <div class="d-flex col-12 my-auto">
 
-              const titulo = document.getElementById('subtitleSite');
-              typeWriter(titulo);
-            </script>
+      <div class="col-6 d-inline my-auto">
+        <h1>Oi eu sou Messias</h1>
+        <h2 class="my-3 text-black"><b>Consultor | Desenvolvedor Fullstack</b></h2>
+        <p class="mt-2 col-sm-10">Com 3+ anos de experiência no mercado, desenvolvendo soluções e prestando consultoria para grandes bancos,
+          empresas de destilados e redes hospitalares</p>
+          <a href="./works.html" class="btn btn-primary mt-3">
+            Veja Meu Trabalho <i class="ms-2 fas fa-chevron-circle-right text-white"></i>
+          </a>
+      </div>
 
-            <!-- Arrow -->
-            <div class="mt-5 mx-auto d-md-none">
-              <a class="scroll" href="#about">
-                <i class="text-white fas fa-chevron-down fa-2x"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-
+      <div class="col-5 col-sm-none">
+        <img src="./images/undraw_my_app_re_gxtj.svg" alt="" class="illustration">
       </div>
     </div>
 
-
-  </header>
-
-
-  <!--Main-->
-  <main class="mt-5">
-
-    <div class="container">
-
-      <!-- About -->
-      <section id="about" class="py-5">
-
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col mt-auto mb-5 mx-auto text-center">
-            <div class="avatar mx-auto">
-              <img src="./images/messias.jpg" class="rounded shadow" alt="Sample avatar"
-                style="height: 15em; width: 15em;">
-            </div>
-            <h4 class="font-weight-bold dark-grey-text my-4">Messias</h4>
-            <h6 class="text-uppercase text-muted mb-4"><strong>Full-Stack Developer</strong></h6>
-            <a href="https://www.linkedin.com/in/messias-nunesmaia/" type="button" class="shadow bg-blue btn-floating btn mx-1 mb-0 btn-fb">
-              <i class="text-white fab fa-linkedin-in fa-lg"></i>
-            </a>
-            <a href="https://www.instagram.com/messias_lsn/" type="button" class="shadow bg-pink btn-floating btn mx-1 mb-0 btn-dribbble">
-              <i class="text-white fab fa-instagram fa-lg"></i>
-            </a>
-            <a href="https://github.com/Messias-Dev" type="button" class="shadow bg-dark btn-floating btn mx-1 mb-0 btn-tw">
-              <i class="text-white fab fa-github fa-lg"></i>
-            </a>
-          </div>
-
-          <!-- Text -->
-          <div class="col mx-auto pt-3 mb-5">
-
-            <h4><strong>Sobre</strong></h4>
-            <p class="text-muted">
-              Olá, meu nome é Messias Nunesmaia. <br> Tenho 21 anos, sou estudante de <strong>Engenharia de
-                Software</strong>
-              e <strong>Consultor de Soluções Digitais</strong>.
-              <br>
-              Tenho experiência em desenvolvimento Full-Stack de sistemas <strong>WEB</strong> e <strong>Mobile</strong>
-            </p>
-            <p><strong>Principais Habilidades</strong></p>
-            <p class="text-muted">
-            <ul>
-              <li>Spring</li>
-              <li>Android</li>
-              <li>Flutter</li>
-              <li>Angular</li>
-            </ul>
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <hr class="my-5" />
-
-      <!--Objective-->
-      <section class="text-center py-4">
-        <h4 class="mb-5"><strong>Objetivo</strong></h4>
-
-        <div class="row">
-
-          <p class="lead">
-            Desenvolver soluções tecnologicas voltadas para <strong>WEB</strong> ou <strong>Mobile</strong>, aprimorar
-            minhas habilidades e ganhar experiência profissional.
-          </p>
-
-        </div>
-
-      </section>
-
-      <hr class="my-5" />
-
-      <!--Sites-->
-      <section class="text-center">
-        <h4 class="mb-5"><strong>Quer ter o seu site ?</strong></h4>
-
-        <div class="row">
-
-          <!-- Cards -->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card shadow">
-              <div class="bg-image ripple" data-mdb-ripple-color="light">
-                <img src="./images/responsive.png" class="img-fluid" />
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Resposividade</h5>
-                <p class="card-text">
-                  Layouts responsivos em todos os dispositivos.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow">
-              <div class="bg-image ripple" data-mdb-ripple-color="light">
-                <img src="./images/freedom.png" class="img-fluid" />
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Liberdade</h5>
-                <p class="card-text">
-                  Criação e atualização de conteúdo próprio.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="./images/simple.png" class="img-fluid" />
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Simplicidade</h5>
-                <p class="card-text">
-                  Tenha seu conteúdo divulgado de forma objetiva, simples e direta.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <a href="./sites.html" class="col-5 col-sm-3 mt-5 mb-3 mx-auto btn-lg btn-success">Saber mais</a>
-          </div>
-
-        </div>
-
-      </section>
-
-      <hr class="my-5" />
-
-      <!--Apps-->
-      <section class="text-center">
-        <h4 class="mb-5">Quer ter o seu aplicativo ?</h4>
-
-        <div class="row">
-
-          <!-- Cards -->
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card shadow">
-              <div class="bg-image ripple" data-mdb-ripple-color="light">
-                <img src="./images/responsive.png" class="img-fluid" />
-                
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Controle</h5>
-                <p class="card-text">
-                  Tenha total controle sobre interações em seu aplicativo.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow">
-              <div class="bg-image ripple" data-mdb-ripple-color="light">
-                <img src="./images/content.png" class="img-fluid" />
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Conteúdo</h5>
-                <p class="card-text">
-                  Tenha todo o tipo de conteúdo.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card shadow">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="./images/security.png" class="img-fluid" />
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Segurança</h5>
-                <p class="card-text">
-                  Autenticação e Banco de Dados Seguro.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <a href="#!" class="col-5 col-sm-3 mt-5 mb-3 mx-auto btn-lg btn-success">Saber mais</a>
-          </div>
-
-        </div>
-
-      </section>
-
-      <hr class="my-5" />
-
-      <!-- Contact -->
-      <section class="mb-5">
-        <h4 class="mb-5 text-center"><strong>Entre em contato</strong></h4>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6">
-
-            <!-- Form -->
-            <form action="https://formspree.io/f/messias.lsn@gmail.com" method="POST">
-
-              <!-- Ip Script -->
-              <script type="text/javascript">
-                var userip;
-              </script>
-
-              <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-              <input type="text" name="Ip" id="user-ip" style="display: none;">
-
-              <script>
-                document.getElementById("user-ip").value = userip;
-              </script>
-
-              <div class="row mb-4">
-                <div class="col">
-                  <div class="form-outline">
-                    <input type="text" name="Nome" id="full-name" required class="form-control" />
-                    <label class="form-label" for="full-name">Nome</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div>
-                    <select class="form-select" name="Sistema" id="select" required>
-                      <option value="" selected disabled>Selecione</option>
-                      <option value="site">Site</option>
-                      <option value="app">Aplicativo</option>
-                      <option value="siteApp">Ambos</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mb-">
-                <div class="col-8">
-                  <!-- Email input -->
-                  <div class="form-outline mb-4">
-                    <input type="email" name="E-mail" id="email-address" required class="form-control" />
-                    <label class="form-label" for="email-address">E-mail</label>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <!-- Telephone input -->
-                  <div class="form-outline mb-4">
-                    <input type="number" name="Telefone" id="telephone" required class="form-control" />
-                    <label class="form-label" for="telephone">Telefone</label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <textarea class="form-control" name="Mensagem" id="complaint" rows="4"></textarea>
-                <label class="form-label" for="complaint">Mensagem</label>
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-success text-white btn-block mb-4">
-                Enviar
-              </button>
-
-
-
-            </form>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-
-  <!--Footer-->
-  <footer class="bg-light text-lg-start">
-
-    <hr class="m-0" />
-
-    <div class="text-center py-4 align-items-center">
-      <p>Me siga nas redes</p>
-      <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="btn btn-success btn-floating mx-1"
-        role="button" rel="nofollow" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://www.instagram.com/messias_lsn/" class="btn btn-success btn-floating mx-1" role="button"
-        rel="nofollow" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://github.com/Messias-Dev" class="btn btn-success btn-floating mx-1" role="button" rel="nofollow"
-        target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright:
-      <a class="text-dark" href="https://www.messias.gq">Messias Nunesmaia</a>
-    </div>
-
-
-  </footer>
-
-
-
+  </div>
 
   <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
 </body>
 
 </html>
