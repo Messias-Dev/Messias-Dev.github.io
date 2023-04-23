@@ -32,71 +32,105 @@
 
 <body>
 
-  <div id="glassmorphism" class="card my-auto">
+  <main class="continous-flow">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <!-- Container wrapper -->
-      <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand me-2" href="./index.html">
-          <i class="fas fa-home"></i>
-        </a>
+    <!-- Presentation -->
+    <section id="presentation" class="section">
 
-        <!-- Toggle a -->
-        <a href="./index.html" class="navbar-toggler" type="a" data-mdb-toggle="collapse" data-mdb-target="#navbarasExample"
-          aria-controls="navbarasExample" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </a>
+      <!-- Header -->
+      <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
 
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarasExample">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Navbar brand -->
+              <a class="navbar-brand mt-2 mt-lg-0" href="#presentation">
+                <i class="fas fa-house"></i>
+              </a>
+              <!-- Right links -->
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-me">Sobre mim</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Experiência</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contato</a>
+                </li>
+              </ul>
+              <!-- Right links -->
+            </div>
+            <!-- Collapsible wrapper -->
 
-          <!-- Center links -->
-          <div class="d-flex align-items-center ms-auto">
-            <a href="./index.html" class="btn btn-link px-3 me-2">
-              Sobre
-            </a>
-            <a href="./works.html" class="btn btn-link me-3">
-              Meu trabalho
-            </a>
-            <a href="https://www.linkedin.com/in/messias-nunesmaia/" class="btn btn-link me-3">
-              LinkedIn
-            </a>
           </div>
+          <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+      </header>
 
-          <!-- Right links -->
-          <div class="d-flex align-items-center ms-auto">
-            <a href="./hire.html" class="btn btn-secondary px-3 me-2">
-              Me contrate
-            </a>
+      <!-- Presentation -->
+      <div class="row col h-100">
+
+        <div class="d-flex col-6 text-end h-100">
+          <div class="my-auto w-100">
+            <h1 class="text-primary">Olá</h1>
+            <h6 class="text-primary">Eu sou Messias</h6>
           </div>
         </div>
-        <!-- Collapsible wrapper -->
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
 
-    <!-- Description -->
-    <div class="d-flex col-12 my-auto">
-
-      <div class="col-6 d-inline my-auto">
-        <h1>Oi eu sou Messias</h1>
-        <h2 class="my-3 text-black"><b>Consultor | Desenvolvedor Fullstack</b></h2>
-        <p class="mt-2 col-sm-10">Com 3+ anos de experiência no mercado, desenvolvendo soluções e prestando consultoria para grandes bancos,
-          empresas de destilados e redes hospitalares</p>
-          <a href="./works.html" class="btn btn-primary mt-3">
-            Veja Meu Trabalho <i class="ms-2 fas fa-chevron-circle-right text-white"></i>
-          </a>
+        <div class="col-6"></div>
       </div>
 
-      <div class="col-5 col-sm-none">
-        <img src="./images/undraw_my_app_re_gxtj.svg" alt="" class="illustration">
-      </div>
-    </div>
+    </section>
 
-  </div>
+    <!-- About me -->
+    <section id="about-me" class="section">
+
+      <div class="row col h-100">
+
+        <div class="d-flex mx-auto col-5 text-end h-100">
+          <div class="my-auto w-100">
+            <h2 class="text-primary">Sobre mim</h2>
+          </div>
+        </div>
+
+        <div class="d-flex col-1 mx-auto my-auto text-center" style="height: 300px;">
+          <div class="vr h-100 mx-auto"></div>
+        </div>
+
+        <div class="mx-auto d-flex col-5">
+          <div class="my-auto me-auto">
+            <p class="text-primary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+              of
+              type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+              the
+              leap into electronic </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="section2" class="section"></section>
+
+  </main>
+
+  <script src="./index.js"></script>
 
   <!-- MDB -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
