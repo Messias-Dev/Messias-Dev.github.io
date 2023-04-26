@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+.card {
+    background: rgb(61, 65, 77);
+}
+
 .continous-flow {
     height: 100vh;
     overflow-y: scroll;
@@ -22,10 +26,23 @@ body {
     color: #FCFFFF !important;
 }
 
+.text-secondary {
+    /* color: #00FF00 !important */
+    color: #2E8B57 !important
+}
+
 h1 {
     font-size: 8rem;
 }
 
 h2 {
     font-size: 4rem;
+}
+
+button#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
 }
